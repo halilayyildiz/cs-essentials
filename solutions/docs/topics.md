@@ -1,46 +1,49 @@
 # Topics
 
+## Algorithmic complexity / Big-O / Asymptotic analysis
 
-### Algorithmic complexity / Big-O / Asymptotic analysis
+## Data Structures
 
-### Data Structures
-- Arrays 
+- Arrays
 - Linked Lists
 - Stack
 - Queue
 - Hash Table
 
-### Trees
+## Trees
+
 - Binary Search Tree
 - Heap / Priority Queue / Binary Heap
 - Balanced Search Trees (BSTs)
 - Traversals: preorder, inorder, postorder, BFS, DFS
 
-### Sorting Algorithms
+## Sorting Algorithms
+
 - Selection
 - Insertion
 - Heapsort
 - Quicksort
 - Merge Sort
 
-### Graphs
+## Graphs
+
 - Directed
 - Undirected
 - Adjacency matrix
 - Adjacency list
 - Traversals: BFS, DFS
 
-### Recursion
+## Recursion
 
-### Dynamic Programming
+## Dynamic Programming
 
-### OOP
+## OOP
 
-### Design Patterns
+## Design Patterns
 
-### Testing
+## Testing
 
-### String searching & manipulations
+## String searching & manipulations
 
 
 
