@@ -34,7 +34,7 @@
      - licence
      - downloads    
    - Travis CI -- https://travis-ci.org/ (continuouse integration)
-   - Coveralls -- coveralls.io (code coverage)
+   - Coveralls -- https://coveralls.io/ (code coverage)
    - Gitter -- https://gitter.im/ (chat)
  - Electron
   
