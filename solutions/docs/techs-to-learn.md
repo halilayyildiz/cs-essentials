@@ -23,17 +23,20 @@
  
  ### Sample Project
  - Tech Stack
-  - Angular
-  - Node.js
-  - Express -- https://expressjs.com/
-  - NeDB -- https://github.com/louischatriot/nedb
-  - socket.io -- https://github.com/socketio/socket.io
+   - Angular
+   - Node.js
+   - Express -- https://expressjs.com/
+   - NeDB -- https://github.com/louischatriot/nedb
+   - socket.io -- https://github.com/socketio/socket.io
  - Tools
-  - npmjs -- https://www.npmjs.com/ (code publish)
-  - Travis CI -- https://travis-ci.org/ (continuouse integration)
-  - Coveralls -- coveralls.io (code coverage)
-  - Gitter -- https://gitter.im/ (chat)
-  
+   - npmjs -- https://www.npmjs.com/ (code publish)
+     - npm
+     - licence
+     - downloads    
+   - Travis CI -- https://travis-ci.org/ (continuouse integration)
+   - Coveralls -- coveralls.io (code coverage)
+   - Gitter -- https://gitter.im/ (chat)
+ - Electron
   
     
   
