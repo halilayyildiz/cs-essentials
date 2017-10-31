@@ -37,7 +37,7 @@
      - npm
      - licence
      - downloads    
-   - Travis CI -- https://travis-ci.org/ (continuouse integration)
+   - Travis CI -- https://travis-ci.org/ (continuous integration)
    - Coveralls -- https://coveralls.io/ (code coverage)
    - Gitter -- https://gitter.im/ (chat)
  - Electron
