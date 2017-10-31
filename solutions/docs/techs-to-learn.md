@@ -20,6 +20,10 @@
  - Scala
  
  
+ ### Others
+ - Blockchain
+ - 
+ 
  
  ### Sample Project
  - Tech Stack
