@@ -1,9 +1,5 @@
 package com.leetcode.problem;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 public class CoinChange
 {
     public int coinChange(int[] coins, int amount)
