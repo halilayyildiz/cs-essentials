@@ -9,6 +9,7 @@
 - Stack
 - Queue
 - Hash Table
+- Trie
 
 ## Trees
 
@@ -24,6 +25,7 @@
 - Heapsort
 - Quicksort
 - Merge Sort
+- Radix Sort, Bucket Sort
 
 ## Graphs
 
@@ -32,19 +34,18 @@
 - Adjacency matrix
 - Adjacency list
 - Traversals: BFS, DFS
+- Topological Sort
 
 ## Recursion
 
 ## Dynamic Programming
+
+## Regular Expression
+
+## String searching & manipulations
 
 ## OOP
 
 ## Design Patterns
 
 ## Testing
-
-## String searching & manipulations
-
-
-
-
