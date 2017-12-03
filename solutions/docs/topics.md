@@ -9,7 +9,7 @@
 - Stack
 - Queue
 - Hash Table
-- Trie
+- Trie, Radix Tree
 
 ## Trees
 
@@ -17,6 +17,13 @@
 - Heap / Priority Queue / Binary Heap
 - Balanced Search Trees (BSTs)
 - Traversals: preorder, inorder, postorder, BFS, DFS
+
+## Graphs
+
+- Directed/Undirected, Weighted/Unweighted, Cyclic/Acyclic, Sparse/Dense
+- Adjacency matrix, Adjacency list
+- Traversals: BFS, DFS
+- Topological Sort
 
 ## Sorting Algorithms
 
@@ -27,14 +34,6 @@
 - Merge Sort
 - Radix Sort, Bucket Sort
 
-## Graphs
-
-- Directed
-- Undirected
-- Adjacency matrix
-- Adjacency list
-- Traversals: BFS, DFS
-- Topological Sort
 
 ## Recursion
 
