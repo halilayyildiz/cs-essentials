@@ -15,8 +15,11 @@
   
    
 ## Heap, Stack, Queue, Deque
+## Other Data Structures
 
-## Disjoint-Set (Union–Find)
+### Disjoint-Set (Union–Find)
+### Bloom Filter
+
 
 ## Graph
   - BFS
