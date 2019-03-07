@@ -16,10 +16,20 @@
    
 ## Heap, Stack, Queue, Deque
 
+## Disjoint-Set (Union–Find)
+
 ## Graph
   - BFS
   - DFS
   - Backtracking
+  - Topological Sorting
+    - Kahn's algorithm
+  - Shortest Path 
+    - Dijkstra's algorithm
+  - Minimum Spanning Tree
+    - Kruskal's algorithm
+    - Prim's algorithm
+  -
 
 ## Sorting
 QuickSort ( Quickselect -> selection algorithm )
