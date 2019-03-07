@@ -6,9 +6,11 @@
 
 ## Hash Tables
 
+### Minimum Area Rectangle
+
 ## Tree
   - BST
-  -
+  - 
 
   
    
@@ -20,6 +22,7 @@
   - Backtracking
 
 ## Sorting
+QuickSort ( Quickselect -> selection algorithm )
 
 ## String
 
@@ -44,9 +47,10 @@
 ## Dynamic Programming
 
 - 0-1 Knapsack Problem
-- Longest Increasing Subsequence
+- Longest Increasing Subsequence (Patience sorting -> nlogn)
 - Longest Common Subsequence
 - Longest Common Substring
+- Maximum Subarray (Kadane’s Algorithm)
 - 
 
 
