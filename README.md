@@ -19,6 +19,7 @@
 
 ### Disjoint-Set (Union–Find)
 ### Bloom Filter
+### Skip List
 
 
 ## Graph
