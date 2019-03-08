@@ -13,9 +13,7 @@ public void flatten(TreeNode root) {
     flat(root);
 }
 private TreeNode flat(TreeNode node){
-    if(node == null){
-        return null;
-    }
+    if(node == null) return null;
 
     TreeNode left = node.left;
     TreeNode right = node.right;
