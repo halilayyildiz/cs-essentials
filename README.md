@@ -22,7 +22,8 @@
   - Backtracking
 
 ## Sorting
-QuickSort ( Quickselect -> selection algorithm )
+Quicksort ( Quickselect -> selection algorithm )
+
 
 ## String
 
