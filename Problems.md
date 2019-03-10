@@ -2,6 +2,10 @@
 
 ## Arrays And Strings
 
+### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+
+**TODO**
+
 ## Linked Lists
 
 ## Tree & Graphs
@@ -46,3 +50,7 @@ private TreeNode flat(TreeNode node){
 ## Dynamic Programming
 
 ## Others
+
+### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+**TODO**
