@@ -45,6 +45,74 @@ private TreeNode flat(TreeNode node){
 
 ## Backtracking
 
+### [78. Subsets](https://leetcode.com/problems/subsets/)
+
+```java
+public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+        // Arrays.sort(nums);
+        backtrack(list, nums, new ArrayList<Integer>(), 0);
+        return list;
+    }
+    
+    private void backtrack(List<List<Integer>> list, int[] nums, List<Integer> tempList, int start){
+        list.add(new ArrayList(tempList));
+        for(int i=start; i < nums.length; i++){
+            tempList.add(nums[i]);
+            backtrack(list, nums, tempList, i+1);
+            tempList.remove(tempList.size()-1);   
+        }
+    }
+```
+
+### [90. Subsets II](https://leetcode.com/problems/subsets-ii/)
+
+```
+
+```
+
+### [46. Permutations](https://leetcode.com/problems/permutations/)
+
+```
+
+```
+
+### [47. Permutations II](https://leetcode.com/problems/permutations-ii/)
+
+```
+
+```
+
+### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
+
+```
+
+```
+
+### [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+
+```
+
+```
+
+### [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
+
+```
+
+```
+
+### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+
+```
+
+```
+
+
+
+
+
+
+
 ## Sorting and Searching
 
 ## Dynamic Programming
@@ -72,6 +140,15 @@ public int lengthOfLIS(int[] nums) {
     return longestLen;
 }
 ```
+
+### [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+- Sort the array. Ascend on width and descend on height if width are same.
+- Find the longest increasing subsequence based on height
+
+```
+
+```
+
 
 ## Others
 
