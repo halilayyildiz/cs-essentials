@@ -117,6 +117,24 @@ public List<List<Integer>> subsets(int[] nums) {
 
 ## Dynamic Programming
 
+### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+- Kadene's Algorithm
+
+```java
+public int maxSubArray(int[] nums) {
+    int max = Integer.MIN_VALUE;
+    int subArrayMax = 0;
+
+    for (int i = 0; i < nums.length; i++){
+        subArrayMax += nums[i];
+        max = Math.max(max, subArrayMax);
+        subArrayMax = Math.max(subArrayMax, 0);
+    }
+
+    return max;
+}
+```
+
 ### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 ```java
@@ -151,6 +169,26 @@ public int lengthOfLIS(int[] nums) {
 
 
 ## Others
+
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)
+
+- Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
+
+```java
+public int findCelebrity(int n) {
+    int candidate = 0;
+
+    // find celebrity candidate
+    for(int i = 1; i < n; i++){
+        if(knows(candidate, i)) candidate = i;
+    }
+    // test candidate -> celebrity or not
+    for(int i = 0; i < n; i++){
+        if(i != candidate && (knows(candidate, i) || !knows(i, candidate))) return -1;
+    }
+    return candidate;
+}
+```
 
 ### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
 
