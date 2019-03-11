@@ -36,7 +36,10 @@
   -
 
 ## Sorting
-Quicksort ( Quickselect -> selection algorithm )
+- Quicksort ( Quickselect -> selection algorithm )
+- Merge Sort
+- Heap Sort
+- Topological Sorting
 
 
 ## String
