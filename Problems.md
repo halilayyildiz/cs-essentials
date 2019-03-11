@@ -226,6 +226,44 @@ public int search(int[] nums, int target) {
 }
 ```
 
+### [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+
+- ```Search in Rotated Sorted Array``` + allows duplicates 
+
+```java
+public boolean search(int[] nums, int target) {
+
+    int start=0;
+    int end=nums.length-1;
+
+    while(start <= end){
+        int mid = (start+end)/2;
+
+        if(nums[mid] == target){
+            return true;
+        }
+
+        if (nums[mid] == nums[start]) {
+            start++;
+        }else if (nums[start] <= nums[mid]){
+            if (target < nums[mid] && target >= nums[start]){
+                    end = mid - 1;
+            }else{
+                start = mid + 1; 
+            }
+        } 
+        else if (nums[mid] <= nums[end]){
+            if (target > nums[mid] && target <= nums[end]){
+                start = mid + 1;
+            }else{
+                end = mid - 1;
+            }
+        }
+    }
+
+    return false;
+```
+
 ### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 ```java
@@ -251,44 +289,6 @@ public List<Interval> merge(List<Interval> intervals) {
     return new ArrayList<Interval>(s);
 }
 ```
-
-### [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
--  ```Search in Rotated Sorted Array``` + allows duplicates 
-
-```java
-public boolean search(int[] nums, int target) {
-
-    int start=0;
-    int end=nums.length-1;
-
-    while(start <= end){
-        int mid = (start+end)/2;
-
-        if(nums[mid] == target){
-            return true;
-        }
-        
-        if (nums[mid] == nums[start]) {
-            start++;
-        }else if (nums[start] <= nums[mid]){
-            if (target < nums[mid] && target >= nums[start]){
-                    end = mid - 1;
-            }else{
-                start = mid + 1; 
-            }
-        } 
-        else if (nums[mid] <= nums[end]){
-            if (target > nums[mid] && target <= nums[end]){
-                start = mid + 1;
-            }else{
-                end = mid - 1;
-            }
-        }
-    }
-
-    return false;
-```
-
 
 ## Dynamic Programming
 
