@@ -29,6 +29,31 @@ public int lengthOfLongestSubstring(String s) {
 }
 ```
 
+### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) :fire:
+
+```java
+public int longestConsecutive(int[] nums) {
+   if (nums.length < 2) return nums.length;
+
+    int max = 0;
+    Set<Integer> set = new HashSet<>();
+    Arrays.stream(nums).forEach(num -> set.add(num));
+
+    for (int i = 0; i < nums.length; i++){
+        if (!set.contains(nums[i] - 1)){
+            int next = nums[i] + 1;
+            int curLen = 1;
+            while (set.contains(next)){
+                curLen++;
+                next++;
+            }
+            max = Math.max(curLen, max);
+        }
+    }
+    return max;
+}
+```
+
 ### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 
 **TODO**
