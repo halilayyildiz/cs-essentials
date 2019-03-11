@@ -2,6 +2,33 @@
 
 ## Arrays And Strings
 
+### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+```java
+public int lengthOfLongestSubstring(String s) {
+    if(s == null || s.isEmpty()) return 0;
+
+    Set<Character> set = new HashSet<>();
+
+    int max = 1;
+    set.add(s.charAt(0));
+    int start=0;
+    for(int i=1; i < s.length(); i++){
+        if(set.contains(s.charAt(i))){
+            while(s.charAt(start) != s.charAt(i)){
+                set.remove(s.charAt(start));
+                start++;
+            }
+            start++;
+        }else{
+            set.add(s.charAt(i));
+        }
+        max = Math.max(max, i-start+1);
+    }
+    return max;
+}
+```
+
 ### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 
 **TODO**
@@ -172,14 +199,14 @@ public int search(int[] nums, int target) {
 
     int start=0;
     int end=nums.length-1;
-    
+
     while(start <= end){
         int mid = (start+end)/2;
-        
+
         if(nums[mid] == target){
             return mid;
         }
-        
+
         if (nums[start] <= nums[mid]){
                 if (target < nums[mid] && target >= nums[start]){
                     end = mid - 1;
@@ -195,8 +222,33 @@ public int search(int[] nums, int target) {
             }
         }
     }
-    
     return -1;
+}
+```
+
+### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+```java
+public List<Interval> merge(List<Interval> intervals) {
+    if(intervals.isEmpty()) return new ArrayList<Interval>();
+
+    Stack<Interval> s = new Stack();
+    Collections.sort(intervals, (a,b) -> (a.start == b.start) ? a.end - b.end : a.start - b.start);
+
+    Iterator<Interval> it = intervals.iterator();
+    s.push(it.next());
+    while(it.hasNext()){
+        Interval curr = it.next();
+        Interval last = s.peek();
+
+        if(last.end >= curr.start){
+            s.pop();
+            s.push(new Interval(last.start, Math.max(curr.end, last.end)));
+        }else{
+            s.push(curr);
+        }
+    }
+    return new ArrayList<Interval>(s);
 }
 ```
 
