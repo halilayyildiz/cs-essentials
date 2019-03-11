@@ -293,7 +293,7 @@ public int lengthOfLIS(int[] nums) {
 
 ## Others
 
-### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :star::star::star:
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :fire:
 
 - Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
 
