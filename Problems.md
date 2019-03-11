@@ -10,6 +10,34 @@
 
 ## Tree & Graphs
 
+### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+- In DFS, if you find p and q at the same time, move this parent node up, otherwise move p or q up.
+
+```java
+public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
+{
+    if (root == null) return null;
+
+    if (root == p || root == q){
+        return root;
+    }
+
+    TreeNode left_lca = lowestCommonAncestor(root.left, p, q);
+    TreeNode right_lca = lowestCommonAncestor(root.right, p, q);
+
+    if (left_lca != null && right_lca != null){
+        return root;
+    }
+    if (left_lca != null){
+        return left_lca;
+    }
+    else{
+        return right_lca;
+    }   
+}
+```
+
 ### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) 
 
 **TODO**
@@ -103,8 +131,28 @@ public List<List<Integer>> subsets(int[] nums) {
 
 ### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 
-```
+```java
+public List<List<String>> partition(String s) {
+    List<List<String>> list = new ArrayList<>();
+    backtrack(s, new ArrayList<String>(), list);
+    return list;
+}
 
+private void backtrack(String s, List<String> temp, List<List<String>> list){
+    if(s.isEmpty()){
+        list.add(new ArrayList<String>(temp));
+    }
+    
+    for(int i=0; i < s.length(); i++){
+        String str = s.substring(0,i+1);
+        String revStr = new StringBuilder(str).reverse().toString();
+        if(str.equals(revStr)){
+            temp.add(str);
+            backtrack(s.substring(i+1), temp, list);
+            temp.remove(temp.size()-1);
+        }
+    }
+}
 ```
 
 
@@ -114,6 +162,81 @@ public List<List<Integer>> subsets(int[] nums) {
 
 
 ## Sorting and Searching
+
+### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+
+- When you find middle, one of the sides will be sorted already, check if target values is in that sorted range, otherwise continue with other side.
+
+```java
+public int search(int[] nums, int target) {
+
+    int start=0;
+    int end=nums.length-1;
+    
+    while(start <= end){
+        int mid = (start+end)/2;
+        
+        if(nums[mid] == target){
+            return mid;
+        }
+        
+        if (nums[start] <= nums[mid]){
+                if (target < nums[mid] && target >= nums[start]){
+                    end = mid - 1;
+                }else{
+                    start = mid + 1; 
+                }
+        } 
+        if (nums[mid] <= nums[end]){
+            if (target > nums[mid] && target <= nums[end]){
+                start = mid + 1;
+            }else{
+                end = mid - 1;
+            }
+        }
+    }
+    
+    return -1;
+}
+```
+
+### [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+-  ```Search in Rotated Sorted Array``` + Allows duplicates 
+
+```java
+public boolean search(int[] nums, int target) {
+
+    int start=0;
+    int end=nums.length-1;
+
+    while(start <= end){
+        int mid = (start+end)/2;
+
+        if(nums[mid] == target){
+            return true;
+        }
+        
+        if (nums[mid] == nums[start]) {
+            start++;
+        }else if (nums[start] <= nums[mid]){
+            if (target < nums[mid] && target >= nums[start]){
+                    end = mid - 1;
+            }else{
+                start = mid + 1; 
+            }
+        } 
+        else if (nums[mid] <= nums[end]){
+            if (target > nums[mid] && target <= nums[end]){
+                start = mid + 1;
+            }else{
+                end = mid - 1;
+            }
+        }
+    }
+
+    return false;
+```
+
 
 ## Dynamic Programming
 
