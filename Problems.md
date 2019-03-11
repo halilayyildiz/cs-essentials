@@ -201,7 +201,7 @@ public int search(int[] nums, int target) {
 ```
 
 ### [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
--  ```Search in Rotated Sorted Array``` + Allows duplicates 
+-  ```Search in Rotated Sorted Array``` + allows duplicates 
 
 ```java
 public boolean search(int[] nums, int target) {
@@ -293,7 +293,7 @@ public int lengthOfLIS(int[] nums) {
 
 ## Others
 
-### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :star::star::star:
 
 - Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
 
