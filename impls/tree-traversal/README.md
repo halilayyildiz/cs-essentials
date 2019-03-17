@@ -16,7 +16,7 @@ public static List<TreeNode> recursive(TreeNode node) {
         return res;
     }
 ```
-### - Iterative
+### Iterative
 ```java
     public static List<TreeNode> iterative(TreeNode node) {
         List<TreeNode> res = new ArrayList<>();
