@@ -79,52 +79,6 @@ public int longestConsecutive(int[] nums) {
 
 ## Tree & Graphs
 
-
-### Tree Traversal (Inorder)
-
-- Recursive
-```java
-public static List<TreeNode> recursive(TreeNode node) {
-        if (node == null)
-            return Collections.emptyList();
-
-        List<TreeNode> res = new ArrayList<>();
-        res.addAll(recursive(node.left));
-        res.add(node);
-        res.addAll(recursive(node.right));
-
-        return res;
-    }
-```
-- Iterative
-```java
-    public static List<TreeNode> iterative(TreeNode node) {
-        List<TreeNode> res = new ArrayList<>();
-
-        if (node == null)
-            return res;
-
-        Stack<TreeNode> s = new Stack<>();
-        while (true) {
-
-            while (node != null) {
-                s.push(node);
-                node = node.left;
-            }
-
-            if (s.isEmpty())
-                break;
-
-            node = s.pop();
-            res.add(node);
-            node = node.right;
-        }
-        return res;
-    }
-```
-
-
-
 ### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 - In DFS, if you find p and q at the same time, move this parent node up, otherwise move p or q up.
