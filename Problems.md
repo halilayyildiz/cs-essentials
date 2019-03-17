@@ -29,6 +29,23 @@ public int lengthOfLongestSubstring(String s) {
 }
 ```
 
+### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+
+```java
+public boolean isMatch(String text, String pattern) {
+    if (pattern.isEmpty()) return text.isEmpty();
+    boolean first_match = (!text.isEmpty() &&
+                            (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '.'));
+
+    if (pattern.length() >= 2 && pattern.charAt(1) == '*'){
+        return (isMatch(text, pattern.substring(2)) ||
+                (first_match && isMatch(text.substring(1), pattern)));
+    } else {
+        return first_match && isMatch(text.substring(1), pattern.substring(1));
+    }
+}
+```
+
 ### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) :fire:
 
 ```java
@@ -61,6 +78,52 @@ public int longestConsecutive(int[] nums) {
 ## Linked Lists
 
 ## Tree & Graphs
+
+
+### Tree Traversal (Inorder)
+
+- Recursive
+```java
+public static List<TreeNode> recursive(TreeNode node) {
+        if (node == null)
+            return Collections.emptyList();
+
+        List<TreeNode> res = new ArrayList<>();
+        res.addAll(recursive(node.left));
+        res.add(node);
+        res.addAll(recursive(node.right));
+
+        return res;
+    }
+```
+- Iterative
+```java
+    public static List<TreeNode> iterative(TreeNode node) {
+        List<TreeNode> res = new ArrayList<>();
+
+        if (node == null)
+            return res;
+
+        Stack<TreeNode> s = new Stack<>();
+        while (true) {
+
+            while (node != null) {
+                s.push(node);
+                node = node.left;
+            }
+
+            if (s.isEmpty())
+                break;
+
+            node = s.pop();
+            res.add(node);
+            node = node.right;
+        }
+        return res;
+    }
+```
+
+
 
 ### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
@@ -334,7 +397,7 @@ public int maxSubArray(int[] nums) {
 }
 ```
 
-### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) :fire:
 
 ```java
 public int lengthOfLIS(int[] nums) {
