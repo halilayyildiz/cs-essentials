@@ -48,6 +48,9 @@ public boolean isMatch(String text, String pattern) {
 
 ### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) :fire:
 
+- Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+- Your algorithm should run in O(n) complexity.
+
 ```java
 public int longestConsecutive(int[] nums) {
    if (nums.length < 2) return nums.length;
@@ -69,6 +72,12 @@ public int longestConsecutive(int[] nums) {
     }
     return max;
 }
+```
+
+### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+
+```java
+
 ```
 
 ### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
@@ -181,6 +190,42 @@ private TreeNode flat(TreeNode node){
     node.left = null;
     return last;
 }
+```
+
+### [341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)
+
+```java
+public class NestedIterator implements Iterator<Integer> {
+    
+    Stack<NestedInteger> stack = new Stack<>();
+    
+    public NestedIterator(List<NestedInteger> nestedList) {
+        for(int i = nestedList.size() - 1; i >= 0; i--) {
+            stack.push(nestedList.get(i));
+        }
+    }
+
+    @Override
+    public Integer next() {
+        return stack.pop().getInteger();
+    }
+
+    @Override
+    public boolean hasNext() {
+        while(!stack.isEmpty()) {
+            NestedInteger curr = stack.peek();
+            if(curr.isInteger()) {
+                return true;
+            }
+            stack.pop();
+            for(int i = curr.getList().size() - 1; i >= 0; i--) {
+                stack.push(curr.getList().get(i));
+            }
+        }
+        return false;
+    }
+}
+
 ```
 
 
@@ -426,6 +471,30 @@ public int lengthOfLIS(int[] nums) {
 
 ```
 
+```
+
+### [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
+
+```java
+public int numDecodings(String s) {
+    if(s.isEmpty()) return 0;
+    
+    int n = s.length();
+    int[] dp = new int[n+1];
+    dp[n] = 1;
+
+    for(int i=n-1;i>=0;i--) {
+        if(s.charAt(i) == '0') 
+            dp[i] = 0;
+        else {
+            dp[i] = dp[i+1];
+            if(i < (n-1) && (s.charAt(i) == '1' || s.charAt(i) == '2' && s.charAt(i+1) < '7')) 
+                dp[i]+=dp[i+2];
+        }
+    }
+
+    return dp[0];   
+}
 ```
 
 
