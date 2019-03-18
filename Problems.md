@@ -82,7 +82,9 @@ public int longestConsecutive(int[] nums) {
 
 ### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 
-**TODO**
+```java
+// TODO
+```
 
 ## Linked Lists
 
@@ -156,13 +158,13 @@ class BSTIterator {
 ### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 ```java
-// todo
+// TODO
 ```
 
 ### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) 
 
 ```java
-// todo
+// TODO
 ```
 
 ### [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
@@ -225,9 +227,7 @@ public class NestedIterator implements Iterator<Integer> {
         return false;
     }
 }
-
 ```
-
 
 
 ## Backtracking
@@ -497,6 +497,69 @@ public int numDecodings(String s) {
 }
 ```
 
+## Design
+
+### [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+- Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+
+```java
+// TODO
+```
+
+### [211. Add and Search Word - Data Structure Design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+
+```java
+class WordDictionary {
+
+    class TrieNode {
+        Map<Character, TrieNode> children;
+        TrieNode(){
+            this.children = new HashMap<Character, TrieNode>();
+        } 
+    }
+    
+    TrieNode root;
+    
+    public WordDictionary() {
+        this.root = new TrieNode();
+    }
+    
+    public void addWord(String word) {
+        word = word + "#";
+        
+        TrieNode node = root;
+        for(int i=0; i < word.length(); i++){
+            node = node.children.computeIfAbsent(word.charAt(i), t -> new TrieNode());
+        }  
+    }
+    
+    public boolean search(String word) {
+        return searchNode(word + "#", root);
+    }
+
+    private boolean searchNode(String word, TrieNode node) {
+        if(word.isEmpty()) return true;
+        
+        for(int i=0; i < word.length(); i++){
+            if(word.charAt(i) == '.'){
+                // search for every children, one true result is enough
+                for(TrieNode child : node.children.values()){
+                    if(searchNode(word.substring(i+1,word.length()), child))
+                        return true;
+                }
+                // if not found in any children, then return false
+                return false;
+            }else{
+                node = node.children.get(word.charAt(i));
+                if(node == null)
+                    return false;
+            }
+        }
+        
+        return true;
+    }
+}
+```
 
 ## Others
 
@@ -522,4 +585,6 @@ public int findCelebrity(int n) {
 
 ### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
 
-**TODO**
+```java
+// TODO
+```
