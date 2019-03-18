@@ -500,6 +500,7 @@ public int numDecodings(String s) {
 ## Design
 
 ### [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+
 - Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 
 ```java
@@ -507,6 +508,10 @@ public int numDecodings(String s) {
 ```
 
 ### [211. Add and Search Word - Data Structure Design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+
+- Design a data structure that supports the following two operations:
+    - void addWord(word)
+    - bool search(word)
 
 ```java
 class WordDictionary {
