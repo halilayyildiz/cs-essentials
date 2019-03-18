@@ -509,9 +509,7 @@ public int numDecodings(String s) {
 
 ### [211. Add and Search Word - Data Structure Design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
 
-- Design a data structure that supports the following two operations:
-    - void addWord(word)
-    - bool search(word)
+- Design a data structure that supports the following two operations: `void addWord(word)` and `bool search(word)`
 
 ```java
 class WordDictionary {
