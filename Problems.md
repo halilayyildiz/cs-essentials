@@ -107,6 +107,48 @@ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
 }
 ```
 
+### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+
+- Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. 
+- Calling next() will return the next smallest number in the BST.
+
+```java
+class BSTIterator {
+    
+    private Stack<TreeNode> s = new Stack<>();
+
+    public BSTIterator(TreeNode root) {
+        while(root != null){
+            s.push(root);
+            root = root.left;
+        }
+    }
+    
+    /** @return the next smallest number */
+    public int next() {
+        TreeNode last = s.pop();
+        
+        TreeNode node = last.right;
+        while(node != null){
+            s.push(node);
+            node = node.left;
+        }
+        return last.val;
+    }
+    
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return !s.isEmpty();
+    }
+}
+```
+
+
+
+
+
+
+
 ### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) 
 
 **TODO**
