@@ -4,30 +4,37 @@
 
 ### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
-```java
-public int lengthOfLongestSubstring(String s) {
-    if(s == null || s.isEmpty()) return 0;
+<details>
+    <summary>Solution</summary>
+    
+    ```java
+    public int lengthOfLongestSubstring(String s) {
+        if(s == null || s.isEmpty()) return 0;
 
-    Set<Character> set = new HashSet<>();
+        Set<Character> set = new HashSet<>();
 
-    int max = 1;
-    set.add(s.charAt(0));
-    int start=0;
-    for(int i=1; i < s.length(); i++){
-        if(set.contains(s.charAt(i))){
-            while(s.charAt(start) != s.charAt(i)){
-                set.remove(s.charAt(start));
+        int max = 1;
+        set.add(s.charAt(0));
+        int start=0;
+        for(int i=1; i < s.length(); i++){
+            if(set.contains(s.charAt(i))){
+                while(s.charAt(start) != s.charAt(i)){
+                    set.remove(s.charAt(start));
+                    start++;
+                }
                 start++;
+            }else{
+                set.add(s.charAt(i));
             }
-            start++;
-        }else{
-            set.add(s.charAt(i));
+            max = Math.max(max, i-start+1);
         }
-        max = Math.max(max, i-start+1);
+        return max;
     }
-    return max;
-}
-```
+    ```
+
+</details>
+
+
 
 ### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
 
