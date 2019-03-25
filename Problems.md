@@ -4,7 +4,7 @@
 ### []()
 
 <details><summary>Solution</summary><p>
-    
+
 ```java
 
 ```
@@ -46,7 +46,10 @@ public int lengthOfLongestSubstring(String s) {
 
 </p></details>
 
+
 ### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 public boolean isMatch(String text, String pattern) {
@@ -63,10 +66,15 @@ public boolean isMatch(String text, String pattern) {
 }
 ```
 
+</p></details>
+
+
 ### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) :fire:
 
 - Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 - Your algorithm should run in O(n) complexity.
+
+<details><summary>Solution</summary><p>
 
 ```java
 public int longestConsecutive(int[] nums) {
@@ -91,6 +99,9 @@ public int longestConsecutive(int[] nums) {
 }
 ```
 
+</p></details>
+
+
 ### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ```java
@@ -100,12 +111,12 @@ public int longestConsecutive(int[] nums) {
 ### [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 
 ```java
-// TODO
+
 ```
 
 ### [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
-- Your algorithm should run in O(n) time and uses constant extra space.
+- O(n) time and O(1) space.
 
 <details><summary>Solution</summary><p>
 
@@ -142,6 +153,8 @@ public int firstMissingPositive(int[] nums) {
 
 - In DFS, if you find p and q at the same time, move this parent node up, otherwise move p or q up.
 
+<details><summary>Solution</summary><p>
+
 ```java
 public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
 {
@@ -165,6 +178,9 @@ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     }   
 }
 ```
+
+</p></details>
+
 
 ### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
 
