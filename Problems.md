@@ -1,5 +1,18 @@
 # Topics
 
+
+### []()
+
+<details><summary>Solution</summary><p>
+    
+```java
+
+```
+
+</p></details>
+
+
+
 ## Arrays And Strings
 
 ### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
@@ -89,6 +102,37 @@ public int longestConsecutive(int[] nums) {
 ```java
 // TODO
 ```
+
+### [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+
+- Your algorithm should run in O(n) time and uses constant extra space.
+
+<details><summary>Solution</summary><p>
+
+```java
+public int firstMissingPositive(int[] nums) {
+
+    for(int i=0; i < nums.length; i++)
+        if(nums[i] < 0) 
+            nums[i] = 0;
+    
+    for(int i=0; i < nums.length; i++){
+        int n = Math.abs(nums[i]) - 1;
+        
+        if(n >= 0 && n < nums.length && nums[n] >= 0)
+            nums[n] = nums[n] == 0 ? -1 * nums.length : -1 * nums[n];
+    }
+    
+    for(int i=0; i < nums.length; i++)
+        if(nums[i] >= 0) 
+            return i+1;
+    
+    return nums.length+1;
+}
+```
+
+</p></details>
+
 
 ## Linked Lists
 
