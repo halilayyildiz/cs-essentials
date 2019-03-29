@@ -87,3 +87,9 @@ hs_err_pid*
 # End of https://www.gitignore.io/api/java,eclipse
 /target/
 .vscode/launch.json
+leetcode-sol.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/.name
