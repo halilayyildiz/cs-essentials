@@ -46,7 +46,6 @@ public int lengthOfLongestSubstring(String s) {
 
 </p></details>
 
-
 ### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
 
 <details><summary>Solution</summary><p>
@@ -144,6 +143,11 @@ public int firstMissingPositive(int[] nums) {
 
 </p></details>
 
+### [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+```java
+
+```
 
 ## Linked Lists
 
