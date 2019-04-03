@@ -145,9 +145,15 @@ public int firstMissingPositive(int[] nums) {
 
 ### [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
+<details><summary>Solution</summary><p>
+
 ```java
 
+// TODO
+
 ```
+
+</p></details>
 
 ## Linked Lists
 
