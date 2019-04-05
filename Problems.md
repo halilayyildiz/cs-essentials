@@ -150,7 +150,7 @@ public int firstMissingPositive(int[] nums) {
 
 </p></details>
 
-### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) :fire:
 
 <details><summary>Solution</summary><p>
 
