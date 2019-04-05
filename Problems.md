@@ -6,7 +6,7 @@
 <details><summary>Solution</summary><p>
 
 ```java
-
+// TODO
 ```
 
 </p></details>
@@ -67,7 +67,6 @@ public boolean isMatch(String text, String pattern) {
 
 </p></details>
 
-
 ### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) :fire:
 
 - Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
@@ -100,7 +99,6 @@ public int longestConsecutive(int[] nums) {
 
 </p></details>
 
-
 ### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ```java
@@ -123,20 +121,20 @@ public int longestConsecutive(int[] nums) {
 public int firstMissingPositive(int[] nums) {
 
     for(int i=0; i < nums.length; i++)
-        if(nums[i] < 0) 
+        if(nums[i] < 0)
             nums[i] = 0;
-    
+
     for(int i=0; i < nums.length; i++){
         int n = Math.abs(nums[i]) - 1;
-        
+
         if(n >= 0 && n < nums.length && nums[n] >= 0)
             nums[n] = nums[n] == 0 ? -1 * nums.length : -1 * nums[n];
     }
-    
+
     for(int i=0; i < nums.length; i++)
-        if(nums[i] >= 0) 
+        if(nums[i] >= 0)
             return i+1;
-    
+
     return nums.length+1;
 }
 ```
@@ -154,6 +152,64 @@ public int firstMissingPositive(int[] nums) {
 ```
 
 </p></details>
+
+### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+
+<details><summary>Solution</summary><p>
+
+```java
+public int longestOnes(int[] A, int K) {
+
+    int max = 0;
+
+    for(int lo=0, hi=0; hi < A.length; hi++){
+        if(A[hi] == 0 && K > 0){
+            K--;
+        }else if(A[hi] == 0 && K == 0){
+            while(K == 0 && lo < A.length){
+                if(A[lo] == 0){
+                    K++;
+                }
+                lo++;
+            }
+            K--;
+        }
+
+        max = Math.max(max, hi+1 - lo);
+    }
+
+    return max;
+}
+```
+
+</p></details>
+
+### [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+<details><summary>Solution</summary><p>
+
+```java
+public int characterReplacement(String s, int k) {
+
+        int[] count = new int[26];
+        int res = 0;
+
+        int max = 0;
+        for(int lo=0, hi=0; hi < s.length(); hi++){
+            max = Math.max(max, ++count[s.charAt(hi) - 'A']);
+            if(hi - lo + 1 - max > k){
+                count[s.charAt(lo) - 'A']--;
+                lo++;
+            }
+            res = Math.max(res, hi - lo + 1);
+        }
+
+        return res;
+    }
+```
+
+</p></details>
+
 
 ## Linked Lists
 
@@ -197,9 +253,11 @@ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
 - Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. 
 - Calling next() will return the next smallest number in the BST.
 
+<details><summary>Solution</summary><p>
+
 ```java
 class BSTIterator {
-    
+
     private Stack<TreeNode> s = new Stack<>();
 
     public BSTIterator(TreeNode root) {
@@ -208,11 +266,11 @@ class BSTIterator {
             root = root.left;
         }
     }
-    
+
     /** @return the next smallest number */
     public int next() {
         TreeNode last = s.pop();
-        
+
         TreeNode node = last.right;
         while(node != null){
             s.push(node);
@@ -221,7 +279,7 @@ class BSTIterator {
 
         return last.val;
     }
-    
+
     /** @return whether we have a next smallest number */
     public boolean hasNext() {
         return !s.isEmpty();
@@ -229,17 +287,27 @@ class BSTIterator {
 }
 ```
 
+</p></details>
+
 ### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 // TODO
 ```
+
+</p></details>
 
 ### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) 
 
+<details><summary>Solution</summary><p>
+
 ```java
 // TODO
 ```
+
+</p></details>
 
 ### [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 
@@ -328,41 +396,69 @@ public List<List<Integer>> subsets(int[] nums) {
 
 ### [90. Subsets II](https://leetcode.com/problems/subsets-ii/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [46. Permutations](https://leetcode.com/problems/permutations/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [47. Permutations II](https://leetcode.com/problems/permutations-ii/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+
+
+
+
 
 ```java
 public List<List<String>> partition(String s) {
@@ -577,14 +673,110 @@ public int numDecodings(String s) {
 
 - Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 
+<details><summary>Solution</summary><p>
+
 ```java
 // TODO
 ```
+
+</p></details>
 
 ### [211. Add and Search Word - Data Structure Design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
 
 - Design a data structure that supports the following two operations: `void addWord(word)` and `bool search(word)`
 
+<details><summary>Solution</summary><p>
+
+```java
+class WordDictionary {
+
+    class TrieNode {
+        Map<Character, TrieNode> children;
+        TrieNode(){
+            this.children = new HashMap<Character, TrieNode>();
+        }
+    }
+
+    TrieNode root;
+
+    public WordDictionary() {
+        this.root = new TrieNode();
+    }
+
+    public void addWord(String word) {
+        word = word + "#";
+
+        TrieNode node = root;
+        for(int i=0; i < word.length(); i++){
+            node = node.children.computeIfAbsent(word.charAt(i), t -> new TrieNode());
+        }  
+    }
+
+    public boolean search(String word) {
+        return searchNode(word + "#", root);
+    }
+
+    private boolean searchNode(String word, TrieNode node) {
+        if(word.isEmpty()) return true;
+
+        for(int i=0; i < word.length(); i++){
+            if(word.charAt(i) == '.'){
+                // search for every children, one true result is enough
+                for(TrieNode child : node.children.values()){
+                    if(searchNode(word.substring(i+1,word.length()), child))
+                        return true;
+                }
+                // if not found in any children, then return false
+                return false;
+            }else{
+                node = node.children.get(word.charAt(i));
+                if(node == null)
+                    return false;
+            }
+        }
+
+        return true;
+    }
+}
+```
+
+</p></details>
+
+## Others
+
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :fire:
+
+- Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
+
+<details><summary>Solution</summary><p>
+
+```java
+public int findCelebrity(int n) {
+    int candidate = 0;
+
+    // find celebrity candidate
+    for(int i = 1; i < n; i++){
+        if(knows(candidate, i)) candidate = i;
+    }
+    // test candidate -> celebrity or not
+    for(int i = 0; i < n; i++){
+        if(i != candidate && (knows(candidate, i) || !knows(i, candidate))) return -1;
+    }
+    return candidate;
+}
+```
+
+</p></details>
+
+### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
+```
+
+</p></details>
 ```java
 class WordDictionary {
 
@@ -644,6 +836,8 @@ class WordDictionary {
 
 - Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
 
+<details><summary>Solution</summary><p>
+
 ```java
 public int findCelebrity(int n) {
     int candidate = 0;
@@ -660,8 +854,190 @@ public int findCelebrity(int n) {
 }
 ```
 
+</p></details>
+
 ### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 // TODO
 ```
+
+</p></details>
+```java
+class WordDictionary {
+
+    class TrieNode {
+        Map<Character, TrieNode> children;
+        TrieNode(){
+            this.children = new HashMap<Character, TrieNode>();
+        } 
+    }
+    
+    TrieNode root;
+    
+    public WordDictionary() {
+        this.root = new TrieNode();
+    }
+    
+    public void addWord(String word) {
+        word = word + "#";
+        
+        TrieNode node = root;
+        for(int i=0; i < word.length(); i++){
+            node = node.children.computeIfAbsent(word.charAt(i), t -> new TrieNode());
+        }  
+    }
+    
+    public boolean search(String word) {
+        return searchNode(word + "#", root);
+    }
+
+    private boolean searchNode(String word, TrieNode node) {
+        if(word.isEmpty()) return true;
+        
+        for(int i=0; i < word.length(); i++){
+            if(word.charAt(i) == '.'){
+                // search for every children, one true result is enough
+                for(TrieNode child : node.children.values()){
+                    if(searchNode(word.substring(i+1,word.length()), child))
+                        return true;
+                }
+                // if not found in any children, then return false
+                return false;
+            }else{
+                node = node.children.get(word.charAt(i));
+                if(node == null)
+                    return false;
+            }
+        }
+        
+        return true;
+    }
+}
+```
+
+## Others
+
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :fire:
+
+- Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
+
+<details><summary>Solution</summary><p>
+
+```java
+public int findCelebrity(int n) {
+    int candidate = 0;
+
+    // find celebrity candidate
+    for(int i = 1; i < n; i++){
+        if(knows(candidate, i)) candidate = i;
+    }
+    // test candidate -> celebrity or not
+    for(int i = 0; i < n; i++){
+        if(i != candidate && (knows(candidate, i) || !knows(i, candidate))) return -1;
+    }
+    return candidate;
+}
+```
+
+</p></details>
+
+### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
+```
+
+</p></details>
+```java
+class WordDictionary {
+
+    class TrieNode {
+        Map<Character, TrieNode> children;
+        TrieNode(){
+            this.children = new HashMap<Character, TrieNode>();
+        } 
+    }
+    
+    TrieNode root;
+    
+    public WordDictionary() {
+        this.root = new TrieNode();
+    }
+    
+    public void addWord(String word) {
+        word = word + "#";
+        
+        TrieNode node = root;
+        for(int i=0; i < word.length(); i++){
+            node = node.children.computeIfAbsent(word.charAt(i), t -> new TrieNode());
+        }  
+    }
+    
+    public boolean search(String word) {
+        return searchNode(word + "#", root);
+    }
+
+    private boolean searchNode(String word, TrieNode node) {
+        if(word.isEmpty()) return true;
+        
+        for(int i=0; i < word.length(); i++){
+            if(word.charAt(i) == '.'){
+                // search for every children, one true result is enough
+                for(TrieNode child : node.children.values()){
+                    if(searchNode(word.substring(i+1,word.length()), child))
+                        return true;
+                }
+                // if not found in any children, then return false
+                return false;
+            }else{
+                node = node.children.get(word.charAt(i));
+                if(node == null)
+                    return false;
+            }
+        }
+        
+        return true;
+    }
+}
+```
+
+## Others
+
+### [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) :fire:
+
+- Tricky, ```bool knows(a, b)``` result of this method eliminates either a or b from celebrity candidate
+
+<details><summary>Solution</summary><p>
+
+```java
+public int findCelebrity(int n) {
+    int candidate = 0;
+
+    // find celebrity candidate
+    for(int i = 1; i < n; i++){
+        if(knows(candidate, i)) candidate = i;
+    }
+    // test candidate -> celebrity or not
+    for(int i = 0; i < n; i++){
+        if(i != candidate && (knows(candidate, i) || !knows(i, candidate))) return -1;
+    }
+    return candidate;
+}
+```
+
+</p></details>
+
+### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
+```
+
+</p></details>
