@@ -1,6 +1,5 @@
 # Topics
 
-
 ### []()
 
 <details><summary>Solution</summary><p>
@@ -10,8 +9,6 @@
 ```
 
 </p></details>
-
-
 
 ## Arrays And Strings
 
@@ -210,7 +207,6 @@ public int characterReplacement(String s, int k) {
 
 </p></details>
 
-
 ## Linked Lists
 
 ## Tree & Graphs
@@ -241,12 +237,11 @@ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     }
     else{
         return right_lca;
-    }   
+    }
 }
 ```
 
 </p></details>
-
 
 ### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
 
@@ -311,6 +306,8 @@ class BSTIterator {
 
 ### [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 
+<details><summary>Solution</summary><p>
+
 ```java
 public void flatten(TreeNode root) {
     flat(root);
@@ -336,13 +333,17 @@ private TreeNode flat(TreeNode node){
 }
 ```
 
+</p></details>
+
 ### [341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 public class NestedIterator implements Iterator<Integer> {
-    
+
     Stack<NestedInteger> stack = new Stack<>();
-    
+
     public NestedIterator(List<NestedInteger> nestedList) {
         for(int i = nestedList.size() - 1; i >= 0; i--) {
             stack.push(nestedList.get(i));
@@ -371,10 +372,13 @@ public class NestedIterator implements Iterator<Integer> {
 }
 ```
 
+</p></details>
 
 ## Backtracking
 
 ### [78. Subsets](https://leetcode.com/problems/subsets/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 public List<List<Integer>> subsets(int[] nums) {
@@ -383,7 +387,7 @@ public List<List<Integer>> subsets(int[] nums) {
         backtrack(list, nums, new ArrayList<Integer>(), 0);
         return list;
     }
-    
+
     private void backtrack(List<List<Integer>> list, int[] nums, List<Integer> tempList, int start){
         list.add(new ArrayList(tempList));
         for(int i=start; i < nums.length; i++){
@@ -393,6 +397,8 @@ public List<List<Integer>> subsets(int[] nums) {
         }
     }
 ```
+
+</p></details>
 
 ### [90. Subsets II](https://leetcode.com/problems/subsets-ii/)
 
@@ -456,9 +462,7 @@ public List<List<Integer>> subsets(int[] nums) {
 
 ### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 
-
-
-
+<details><summary>Solution</summary><p>
 
 ```java
 public List<List<String>> partition(String s) {
@@ -471,7 +475,7 @@ private void backtrack(String s, List<String> temp, List<List<String>> list){
     if(s.isEmpty()){
         list.add(new ArrayList<String>(temp));
     }
-    
+
     for(int i=0; i < s.length(); i++){
         String str = s.substring(0,i+1);
         String revStr = new StringBuilder(str).reverse().toString();
@@ -484,17 +488,15 @@ private void backtrack(String s, List<String> temp, List<List<String>> list){
 }
 ```
 
-
-
-
-
-
+</p></details>
 
 ## Sorting and Searching
 
 ### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 - When you find middle, one of the sides will be sorted already, check if target values is in that sorted range, otherwise continue with other side.
+
+<details><summary>Solution</summary><p>
 
 ```java
 public int search(int[] nums, int target) {
@@ -528,9 +530,13 @@ public int search(int[] nums, int target) {
 }
 ```
 
+</p></details>
+
 ### [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 - ```Search in Rotated Sorted Array``` + allows duplicates 
+
+<details><summary>Solution</summary><p>
 
 ```java
 public boolean search(int[] nums, int target) {
@@ -551,9 +557,9 @@ public boolean search(int[] nums, int target) {
             if (target < nums[mid] && target >= nums[start]){
                     end = mid - 1;
             }else{
-                start = mid + 1; 
+                start = mid + 1;
             }
-        } 
+        }
         else if (nums[mid] <= nums[end]){
             if (target > nums[mid] && target <= nums[end]){
                 start = mid + 1;
@@ -565,7 +571,11 @@ public boolean search(int[] nums, int target) {
     return false;
 ```
 
+</p></details>
+
 ### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 public List<Interval> merge(List<Interval> intervals) {
@@ -591,10 +601,15 @@ public List<Interval> merge(List<Interval> intervals) {
 }
 ```
 
+</p></details>
+
 ## Dynamic Programming
 
 ### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
 - Kadene's Algorithm
+
+<details><summary>Solution</summary><p>
 
 ```java
 public int maxSubArray(int[] nums) {
@@ -611,15 +626,19 @@ public int maxSubArray(int[] nums) {
 }
 ```
 
+</p></details>
+
 ### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) :fire:
+
+<details><summary>Solution</summary><p>
 
 ```java
 public int lengthOfLIS(int[] nums) {
     if (nums.length < 2) return nums.length;
-    
+
     int longestLen = 1;
     int[] dp = new int[nums.length];
-    
+
     dp[0] = 1;
     for (int i = 0; i < nums.length; i++){
         int maxLen = 0;
@@ -635,20 +654,29 @@ public int lengthOfLIS(int[] nums) {
 }
 ```
 
+</p></details>
+
 ### [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+
 - Sort the array. Ascend on width and descend on height if width are same.
 - Find the longest increasing subsequence based on height
 
+<details><summary>Solution</summary><p>
+
+```java
+// TODO
 ```
 
-```
+</p></details>
 
 ### [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
+
+<details><summary>Solution</summary><p>
 
 ```java
 public int numDecodings(String s) {
     if(s.isEmpty()) return 0;
-    
+
     int n = s.length();
     int[] dp = new int[n+1];
     dp[n] = 1;
@@ -663,9 +691,11 @@ public int numDecodings(String s) {
         }
     }
 
-    return dp[0];   
+    return dp[0]; 
 }
 ```
+
+</p></details>
 
 ## Design
 
