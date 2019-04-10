@@ -1,3 +1,5 @@
+package com.halilayyildiz.impl.tree;
+
 class TreeBuilder {
 
     /* Default Tree

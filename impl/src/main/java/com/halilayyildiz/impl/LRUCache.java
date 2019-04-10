@@ -1,4 +1,6 @@
-class LRUCache {
+package com.halilayyildiz.impl;
+
+public class LRUCache {
 
     public LRUCache(int capacity) {
 
@@ -6,6 +8,8 @@ class LRUCache {
 
     public int get(int key) {
 
+
+        return -1;
     }
 
     public void put(int key, int value) {

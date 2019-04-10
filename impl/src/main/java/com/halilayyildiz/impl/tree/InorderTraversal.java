@@ -1,16 +1,18 @@
+package com.halilayyildiz.impl.tree;
+
 import java.util.*;
 
-public class PreorderTraversal {
+public class InorderTraversal {
     public static void main(String[] args) {
         TreeNode root = TreeBuilder.getTree();
 
         System.out.print("Iterative: ");
-        PreorderTraversal.iterative(root).stream().map(n -> n.val).forEach(val -> System.out.print(val + " "));
+        InorderTraversal.iterative(root).stream().map(n -> n.val).forEach(val -> System.out.print(val + " "));
 
         System.out.println("");
 
         System.out.print("Recursive: ");
-        PreorderTraversal.recursive(root).stream().map(n -> n.val).forEach(val -> System.out.print(val + " "));
+        InorderTraversal.recursive(root).stream().map(n -> n.val).forEach(val -> System.out.print(val + " "));
     }
 
     public static List<TreeNode> recursive(TreeNode node) {
@@ -18,8 +20,8 @@ public class PreorderTraversal {
             return Collections.emptyList();
 
         List<TreeNode> res = new ArrayList<>();
-        res.add(node);
         res.addAll(recursive(node.left));
+        res.add(node);
         res.addAll(recursive(node.right));
 
         return res;
@@ -35,7 +37,6 @@ public class PreorderTraversal {
         while (true) {
 
             while (node != null) {
-                res.add(node);
                 s.push(node);
                 node = node.left;
             }
@@ -44,6 +45,7 @@ public class PreorderTraversal {
                 break;
 
             node = s.pop();
+            res.add(node);
             node = node.right;
         }
         return res;
