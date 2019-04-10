@@ -3,14 +3,14 @@
 ## Search
 
 ### [Binary Search]()
+
+
+## Graph
+
+### [ShortestPath]()
+### [Minumum Spaning Tree]()
 ### [Topological Search]()
-
-
-# Graph
-
-## [ShortestPath]()
-## [Minumum Spaning Tree]()
-## [Find Union DS]()
+### [Find Union DS]()
 
 
 ## Sorting
