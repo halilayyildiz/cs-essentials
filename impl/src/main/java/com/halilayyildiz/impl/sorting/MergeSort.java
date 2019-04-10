@@ -1,10 +1,8 @@
 package com.halilayyildiz.impl.sorting;
 
-
 import java.util.Arrays;
 
 public class MergeSort {
-
 
     public void mergeSort(int[] A) {
         int n = A.length;
