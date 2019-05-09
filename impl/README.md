@@ -7,8 +7,8 @@
 ## Graph
 
 ### [ShortestPath](src/main/java/com/halilayyildiz/impl/graph/ShortestPath.java)
-### [Minumum Spaning Tree]()
-### [Topological Search]()
+### [Minumum Spanning Tree](src/main/java/com/halilayyildiz/impl/graph/MinimumSpanningTree.java)
+### [Topological Search](src/main/java/com/halilayyildiz/impl/graph/TopologicalSort.java)
 ### [Find Union DS]()
 
 ## Sorting
