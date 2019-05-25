@@ -30,6 +30,7 @@
 - Adjacency matrix, Adjacency list
 - Traversals: BFS, DFS
 - Topological Sort
+- Union-Find (Disjoint-set)
 - Eulerian Path
 
 ## Backtracking
