@@ -30,6 +30,7 @@
 - Adjacency matrix, Adjacency list
 - Traversals: BFS, DFS
 - Topological Sort
+- Eulerian Path
 
 ## Backtracking
 
