@@ -72,7 +72,6 @@ public class InorderTraversal {
             if (node != null) {
                 s.push(node);
                 node = node.left;
-
             } else {
                 node = s.pop();
                 res.add(node);
