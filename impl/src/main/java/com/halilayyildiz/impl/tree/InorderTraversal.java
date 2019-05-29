@@ -98,9 +98,9 @@ public class InorderTraversal {
         return res;
     }
 
-    private static void pushAllLeft(TreeNode node, Stack stack) {
+    private static void pushAllLeft(TreeNode node, Stack<TreeNode> s) {
         while (node != null) {
-            stack.add(node);
+            s.add(node);
             node = node.left;
         }
     }
