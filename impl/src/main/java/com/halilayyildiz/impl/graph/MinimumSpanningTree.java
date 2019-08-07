@@ -26,19 +26,18 @@ public class MinimumSpanningTree {
 
 
     private List<Edge> kruskalsMST(GraphWeighted g) {
-        PriorityQueue<Edge> edges = new PriorityQueue<>((a, b) -> a.weight - b.weight);
-
-        for (List<Edge> vertexEdges : g.adj) {
-            for (Edge e : vertexEdges) {
-                edges.add(e);
-            }
-        }
-
         List<Edge> res = new ArrayList<>();
         UnionFind uf = new UnionFind(g.v);
 
-        while (!edges.isEmpty()) {
-            Edge edge = edges.poll();
+        PriorityQueue<Edge> pq = new PriorityQueue<>((a, b) -> a.weight - b.weight);
+        for (List<Edge> edges : g.adj) {
+            for (Edge e : edges) {
+                pq.add(e);
+            }
+        }
+
+        while (!pq.isEmpty()) {
+            Edge edge = pq.poll();
             if (uf.find(edge.from) != uf.find(edge.to)) {
                 res.add(edge);
                 uf.union(edge.from, edge.to);
