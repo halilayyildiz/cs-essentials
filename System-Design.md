@@ -14,3 +14,9 @@
 
 - [Apache Cassandra: The Truth Behind Tunable Consistency, Lightweight Transactions & Secondary Indexes](https://medium.com/yugabyte/apache-cassandra-the-truth-behind-tunable-consistency-lightweight-transactions-secondary-42d928a7d994)
 - 
+
+
+## Know These Things
+- CAP Theorom, PACELC
+- Event Sourcing
+- Timer Queues
