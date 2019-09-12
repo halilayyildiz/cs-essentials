@@ -68,7 +68,6 @@ public class PreorderTraversal {
                 s.push(node);
                 res.add(node);
                 node = node.left;
-
             } else {
                 node = s.pop();
                 node = node.right;
