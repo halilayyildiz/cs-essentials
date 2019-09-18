@@ -7,7 +7,11 @@
 ## Watch
 
 - [Distributed Systems in One Lesson by Tim Berglund](https://www.youtube.com/watch?v=Y6Ev8GIlbxc)
--  
+- [What is API gateway?](https://www.youtube.com/watch?v=vHQqQBYJtLI) `10 mins`
+- []()
+- []()
+- []()
+- []()
 
 
 ## Read
