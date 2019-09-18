@@ -21,7 +21,7 @@
 
 
 ## Know These Things
-- CAP Theorom, PACELC
+- CAP Theorem, PACELC
 - Event Sourcing
 - Timer Queues
 - Long-Polling vs WebSockets vs Server-Sent Events
