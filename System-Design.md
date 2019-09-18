@@ -25,4 +25,5 @@
 - Event Sourcing
 - Timer Queues
 - Long-Polling vs WebSockets vs Server-Sent Events
+- Consistent Hashing
 
