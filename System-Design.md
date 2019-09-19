@@ -13,13 +13,6 @@
 - []()
 - []()
 
-
-## Read
-
-- 
-- 
-
-
 ## Know These Things
 - CAP Theorem, PACELC
 - Event Sourcing
