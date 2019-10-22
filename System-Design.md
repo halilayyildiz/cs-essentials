@@ -9,7 +9,7 @@
 - [Distributed Systems in One Lesson by Tim Berglund](https://www.youtube.com/watch?v=Y6Ev8GIlbxc) `48 mins`
 - [What is API gateway?](https://www.youtube.com/watch?v=vHQqQBYJtLI) `10 mins`
 - [Serverless + Containers = Modern Cloud Applications](https://www.youtube.com/watch?v=q9Wa5KJURec) `42 mins`
-- []()
+- [Designing Events-First Microservices](https://www.infoq.com/presentations/microservices-events-first-design/) `51 mins`
 - []()
 - []()
 
