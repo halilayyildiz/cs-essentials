@@ -14,6 +14,7 @@
 - []()
 
 ## Know These Things
+- [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 - CAP Theorem, PACELC
 - Event Sourcing
 - Timer Queues
