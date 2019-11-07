@@ -24,6 +24,13 @@
   - [Apache Cassandra: The Truth Behind Tunable Consistency, Lightweight Transactions & Secondary Indexes](https://medium.com/yugabyte/apache-cassandra-the-truth-behind-tunable-consistency-lightweight-transactions-secondary-42d928a7d994)
 - Compression Algorithms
   - http://fastcompression.blogspot.com/
-  - https://github.com/lz4/lz4
-  
+  - https://github.com/lz4/lz4 
 -
+
+## Papers
+ - [Shared-Nothing Architecture](http://db.cs.berkeley.edu/papers/hpts85-nothing.pdf)
+ - [Map-Reduce](https://ai.google/research/pubs/pub62)
+ - [Dynamo DB](https://www.dynamodbguide.com/the-dynamo-paper/)
+ - [Google Spanner](https://ai.google/research/pubs/pub45855)
+ - 
+ 
