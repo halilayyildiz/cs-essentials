@@ -33,5 +33,6 @@
  - [Map-Reduce](https://ai.google/research/pubs/pub62)
  - [Dynamo DB](https://www.dynamodbguide.com/the-dynamo-paper/)
  - [Google Spanner](https://ai.google/research/pubs/pub45855)
+   - [Spanner, TrueTime & The CAP Theorem](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45855.pdf)
  - 
  
