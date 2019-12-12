@@ -23,6 +23,7 @@
   - [The Simple Magic of Consistent Hashing](https://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
 - NoSQL Databases
   - [Apache Cassandra: The Truth Behind Tunable Consistency, Lightweight Transactions & Secondary Indexes](https://medium.com/yugabyte/apache-cassandra-the-truth-behind-tunable-consistency-lightweight-transactions-secondary-42d928a7d994)
+  - [DynamoDB](https://www.dynamodbguide.com/what-is-dynamo-db)
 - Compression Algorithms
   - http://fastcompression.blogspot.com/
   - https://github.com/lz4/lz4 
