@@ -17,7 +17,7 @@
 ### [Selection Sort]()
 ### [QuickSort]()
 ### [MergeSort](src/main/java/com/halilayyildiz/impl/sorting/MergeSort.java)
-### [HeapSort]()
+### [HeapSort](src/main/java/com/halilayyildiz/impl/sorting/HeapSort.java)
 
 ## Tree Traversal
 
