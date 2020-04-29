@@ -13,7 +13,6 @@
 
 ## Advanced Data Structures
 
-- Disjoint-Set (Union–Find)
 - Bloom Filter
 - Skip List
 
@@ -30,6 +29,8 @@
 - Adjacency matrix, Adjacency list
 - Traversals: BFS, DFS
 - Topological Sort
+- Union-Find (Disjoint set)
+- Eulerian Path
 
 ## Backtracking
 
