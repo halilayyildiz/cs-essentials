@@ -4,7 +4,11 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public void mergeSort(int[] A) {
+    public void sort(int[] A) {
+        mergeSort(A);
+    }
+
+    private void mergeSort(int[] A) {
         int n = A.length;
 
         if (n < 2)
@@ -21,7 +25,7 @@ public class MergeSort {
         merge(A, left, right);
     }
 
-    public void merge(int[] A, int[] left, int[] right) {
+    private void merge(int[] A, int[] left, int[] right) {
         int i = 0, j = 0, k = 0;
 
         while (i < left.length && j < right.length)

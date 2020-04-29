@@ -4,7 +4,11 @@ import java.util.PriorityQueue;
 
 public class HeapSort {
 
-    public void sortArray(int[] nums) {
+    public void sort(int[] A) {
+        heapSort(A);
+    }
+
+    private void heapSort(int[] nums) {
         if (nums.length < 2) return;
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();

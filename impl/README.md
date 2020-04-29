@@ -15,7 +15,7 @@
 
 ### [Insertion Sort]()
 ### [Selection Sort]()
-### [QuickSort]()
+### [QuickSort](src/main/java/com/halilayyildiz/impl/sorting/QuickSort.java)
 ### [MergeSort](src/main/java/com/halilayyildiz/impl/sorting/MergeSort.java)
 ### [HeapSort](src/main/java/com/halilayyildiz/impl/sorting/HeapSort.java)
 
