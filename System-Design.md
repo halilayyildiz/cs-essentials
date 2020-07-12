@@ -22,7 +22,7 @@
 - Compression Algorithms
   - http://fastcompression.blogspot.com/
   - https://github.com/lz4/lz4 
--
+- RPC frameworks: gRPC (Protocol Buffers), Thrift
 
 ## Papers
  - [Shared-Nothing Architecture](http://db.cs.berkeley.edu/papers/hpts85-nothing.pdf)
