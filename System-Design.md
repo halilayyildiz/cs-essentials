@@ -8,6 +8,7 @@
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 - CAP Theorem, PACELC
 - Event Sourcing
+- [Optimistic Locking](https://enterprisecraftsmanship.com/posts/optimistic-locking-automatic-retry/), Pesimistic Locking
 - Timer Queues
 - Long-Polling vs WebSockets vs Server-Sent Events
 - Consistent Hashing
