@@ -8,7 +8,7 @@
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 - CAP Theorem, PACELC
 - Event Sourcing
-- [Optimistic Locking](https://enterprisecraftsmanship.com/posts/optimistic-locking-automatic-retry/), Pesimistic Locking
+- [Two-phase locking](https://en.wikipedia.org/wiki/Two-phase_locking), [Serializability](https://en.wikipedia.org/wiki/Serializability), [Optimistic Locking](https://enterprisecraftsmanship.com/posts/optimistic-locking-automatic-retry/) [vs](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking) Pesimistic Locking
 - Timer Queues
 - Long-Polling vs WebSockets vs Server-Sent Events
 - Consistent Hashing
