@@ -2,6 +2,9 @@
 
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [System Design Cheatsheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
+- [System Design (hiredintech)](https://www.hiredintech.com/classrooms/system-design/)
+- [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview/)
 
 
 ## Concepts
