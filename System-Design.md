@@ -30,7 +30,6 @@
  - [Dynamo DB](https://www.dynamodbguide.com/the-dynamo-paper/)
  - [Google Spanner](https://ai.google/research/pubs/pub45855)
    - [Spanner, TrueTime & The CAP Theorem](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45855.pdf)
- 
 
 ## Watch
 
@@ -38,12 +37,16 @@
 - [What is API gateway?](https://www.youtube.com/watch?v=vHQqQBYJtLI) `10 mins`
 - [Serverless + Containers = Modern Cloud Applications](https://www.youtube.com/watch?v=q9Wa5KJURec) `42 mins`
 - [Designing Events-First Microservices](https://www.infoq.com/presentations/microservices-events-first-design/) `51 mins`
-- []()
+- [Apache Kafka Explained (Comprehensive Overview)](https://www.youtube.com/watch?v=JalUUBKdcA0) `19 mins`
 - []()
 
 ## Read
  - [Patterns for distributed transactions within a microservices architecture](https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/)
  - [Microservices Design Patterns](https://microservices.io/patterns/microservices.html)
 
+## Books
+- [Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/)
+- 
+ 
 
  
