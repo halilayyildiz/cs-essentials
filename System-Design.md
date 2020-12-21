@@ -23,6 +23,9 @@
   - http://fastcompression.blogspot.com/
   - https://github.com/lz4/lz4 
 - RPC frameworks: gRPC (Protocol Buffers), Thrift
+- Microservices Architecture
+  - Saga Pattern
+  -
 
 ## Papers
  - [Shared-Nothing Architecture](http://db.cs.berkeley.edu/papers/hpts85-nothing.pdf)
@@ -37,8 +40,11 @@
 - [What is API gateway?](https://www.youtube.com/watch?v=vHQqQBYJtLI) `10 mins`
 - [Serverless + Containers = Modern Cloud Applications](https://www.youtube.com/watch?v=q9Wa5KJURec) `42 mins`
 - [Designing Events-First Microservices](https://www.infoq.com/presentations/microservices-events-first-design/) `51 mins`
-- [Apache Kafka Explained (Comprehensive Overview)](https://www.youtube.com/watch?v=JalUUBKdcA0) `19 mins`
-- [Kafka: A Modern Distributed System](https://www.youtube.com/watch?v=Ea3aoACnbEk) `52 mins`
+- Apache Kafka
+  - [Apache Kafka Explained (Comprehensive Overview)](https://www.youtube.com/watch?v=JalUUBKdcA0) `19 mins`
+  - [Kafka: A Modern Distributed System](https://www.youtube.com/watch?v=Ea3aoACnbEk) `52 mins`
+- Microservice Architecture
+  - [Saga Pattern](https://www.youtube.com/watch?v=YPbGW3Fnmbc) `49 min`
 
 ## Read
  - [Patterns for distributed transactions within a microservices architecture](https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/)
