@@ -19,6 +19,7 @@
 - NoSQL Databases
   - [Apache Cassandra: The Truth Behind Tunable Consistency, Lightweight Transactions & Secondary Indexes](https://medium.com/yugabyte/apache-cassandra-the-truth-behind-tunable-consistency-lightweight-transactions-secondary-42d928a7d994)
   - [DynamoDB](https://www.dynamodbguide.com/what-is-dynamo-db)
+  - [Elastic Search](https://www.elastic.co/)
 - Compression Algorithms
   - http://fastcompression.blogspot.com/
   - https://github.com/lz4/lz4 
