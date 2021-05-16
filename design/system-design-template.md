@@ -36,14 +36,23 @@
 
 ## 4- Deep Dive  (~20 mins)
 - API Design
+  - REST vs GraphQL ? why ?
+  - Filtering ? sorting ? pagination ?
+  - Data format ? json, xml, ..
+  - How to handle errors ? error codes ?
+  - Security ? SSL ?
+  - Backward compatibility ? versioning ?
 - Data Model
   - What we store ?
   - Where we store ? SQL vs NoSQL database, cache
   - How we store ? write as is and aggreagated ?
-
-
-
-
+- Inter component communication
+  - RPC protocol ?
+  - Data serialization ? (Protocol Buffers, Thrift)
+- How to improve performance ?
+  - Caching
+- Data retention policy
+- 
 
 
 ## 5- Bottlenecks (~5 mins)
