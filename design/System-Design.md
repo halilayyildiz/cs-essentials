@@ -1,3 +1,6 @@
+# Template
+- [System Design Inteview Template](system-design-template.md)
+
 # Resources
 
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
