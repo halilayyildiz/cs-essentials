@@ -26,8 +26,8 @@
 
 
 ## 2- Estimations  (~5 mins)
--
-
+- What is the expected req/sec ?
+- What is the expected data size in 5 years ?
 
 
 ## 3- High Level Design  (~5 mins)
@@ -44,7 +44,7 @@
   - Backward compatibility ? versioning ?
 - Data Model
   - What we store ?
-  - Where we store ? SQL vs NoSQL database, cache
+  - Where we store ? SQL vs NoSQL database, cache, persistent queue
   - How we store ? write as is and aggreagated ?
 - Inter component communication
   - RPC protocol ?
@@ -59,7 +59,7 @@
 - Usage patterns
   - Service may be mostly used during some part of the day.
   - Spikes ?
-- 
+-   
 
 
 
