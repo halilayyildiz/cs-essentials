@@ -30,6 +30,7 @@
 - Microservices Architecture
   - Saga Pattern
   -
+- [Cache consistency with database](https://danielw.cn/cache-consistency-with-database)
 
 ## Papers
  - [Shared-Nothing Architecture](http://db.cs.berkeley.edu/papers/hpts85-nothing.pdf)
