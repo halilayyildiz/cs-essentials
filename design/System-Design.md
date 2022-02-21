@@ -50,6 +50,7 @@
   - [Kafka: A Modern Distributed System](https://www.youtube.com/watch?v=Ea3aoACnbEk) `52 mins`
 - Microservice Architecture
   - [Saga Pattern](https://www.youtube.com/watch?v=YPbGW3Fnmbc) `49 min`
+- [Google Production Environment](https://www.youtube.com/watch?v=dhTVVWzpc4Q) `15 mins`
 
 ## Read
  - [Patterns for distributed transactions within a microservices architecture](https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/)
